@@ -21,10 +21,10 @@ def render_progressbar(total, iteration, prefix='', suffix='', length=30,
 def notify_progress(seconds_left, chat_id, message_id, total_seconds, bot):
     progress = total_seconds - seconds_left
     bot.update_message(
-            chat_id,
-            message_id,
-            f"{seconds_left}s left \n"
-            f"{render_progressbar(total_seconds, progress)}"
+          chat_id,
+          message_id,
+          f"{seconds_left}s left\n"
+          f"{render_progressbar(total_seconds, progress)}"
         )
 
 
