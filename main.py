@@ -1,11 +1,8 @@
-import os
 import ptbot
-from dotenv import load_dotenv
 from pytimeparse import parse
+from decouple import config
 
-load_dotenv()
-
-TG_TOKEN = os.getenv('TG_TOKEN')
+TG_TOKEN = config('TG_TOKEN')
 
 
 def render_progressbar(total, iteration, prefix='', suffix='', length=30,
